@@ -1,0 +1,24 @@
+@font-face{
+	font-family:"HyundaiExtraBold";
+	src:url('../font/YouandiModernHEB.eot');
+	src:url('../font/YouandiModernHEB-.eot#iefix') format('embedded-opentype'),
+        url('../font/YouandiModernHEB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+	font-family:"HyundaiRegular";
+	src:url('../font/YouandiModernTR.eot');
+	src:url('../font/YouandiModernTR-.eot#iefix') format('embedded-opentype'),
+        url('../font/YouandiModernTR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+@font-face{
+	font-family:"NanumBarunGothicBold";
+	src:url('../font/NanumBarunGothicBold.eot');
+	src:url('../font/NanumBarunGothicBold-.eot#iefix') format('embedded-opentype'),
+        url('../font/NanumBarunGothicBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
