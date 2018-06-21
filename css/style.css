@@ -2,7 +2,22 @@
 @import url("font.css");
 @import url("normalize.css");
 
-/* box-sizing 기본 값 선언 */
-*, *::before, *::after{
-  box-sizing: border-box;
+/* 스타일 초기화 */
+html, body, h1, h2, h3, h4, h5, h6, p{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  
+}
+html{
+  font-size: 10px;
+}
+body{
+  font-size: 1.6rem;   
+  /* ->16px 되는 것 */
+}
+h1, h2, h3, h4, h5, h6{
+  font-size: 1em;
+  /* 상속받은것의 1배 */
+  font-weight: normal;
 }
