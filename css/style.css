@@ -15,9 +15,79 @@ html{
 body{
   font-size: 1.6rem;   
   /* ->16px 되는 것 */
+  background: #7AC7AA;
+  font-family:"HyundaiRegular";
+
+  /* background: #7AC7AA linear-gradient(to top, blue, yellow) no-repeat 100px 50px; */
 }
 h1, h2, h3, h4, h5, h6{
   font-size: 1em;
   /* 상속받은것의 1배 */
   font-weight: normal;
+}
+/* 섹션 1 콘텐츠 레이아웃 */
+.section1{
+  /* background: violet; */
+  display: grid;
+  grid-template-columns: repeat(12, 65px);
+  grid-template-rows: auto auto; /*컨텐츠가 담기면 그 높이만큼 높아지라는 auto*/
+  /* grid-template-areas: "section1-image-wrapper  section1-logo" */
+                       /* "section1-image-wrapper  section1-description" */ /*쓴 위치에 따라 배치됨. 이렇게 맞춰쓸 필요도 없음 걍 보기좋게ㅎ */
+  grid-column-gap: 20px;
+  position: relative;
+  /* background: red; */
+  justify-content: center;
+}
+
+/*
+.section1::after{
+  content: "";
+  background: repeating-linear-gradient(to right, hsla(0,50%,50%,.5), hsla(0,50%,50%,.5) 65px, transparent 65px, transparent 85px);
+  /* 오른쪽으로 빨간부분 65픽셀만큼, 65-85까지 투명 */
+  /* background: yellow; */
+  /*
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 100vh; /*viewport height
+}
+*/
+
+/* 로고 */
+
+.logo{
+  /* background: green; - 영역 잘 지어됐는지 확인 겸 색 넣어봤던것 */
+  font-size: 8rem; /*80px*/
+  color: #fff;
+  font-family: "HyundaiExtraBold";
+  grid-area: section1-logo;
+  /* padding: 50px; */
+  grid-column: 4/ span 6;
+  grid-row: 1/2;
+}
+/* 웨더 앱 소개 */
+.description{
+  /* background: tomato; */
+  font-size: 3rem; /*30px*/
+  color: #fff;
+  /* padding: 0 0 0 50px; /*top 기준으로 시계방향  위 - 오 - 아래 - 왼*/ 
+  line-height: 1.5; /*현재 글자크기 곱하기 1.5*/
+  grid-area: section1-description;
+  grid-column: 7/ span 6; /* span 6 -> 11 */
+  grid-row: 2/3;
+}
+.description span{
+  display: block;
+}
+
+/* 앱 소개 이미지 */
+.image-wrapper{
+  /* grid-area: section1-image-wrapper; */
+  grid-column: 1/ span 4;
+  grid-row: 2/3;
+}
+.image-wrapper img{
+  max-width: 100%;
+  height: auto;
 }
