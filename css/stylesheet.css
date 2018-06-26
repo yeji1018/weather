@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+
+@font-face{
+	font-family:"HyundaiExtraBold";
+	src:url('../font/YouandiModernHEB.eot');
+	src:url('../font/YouandiModernHEB-.eot#iefix') format('embedded-opentype'),
+        url('../font/YouandiModernHEB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+	font-family:"HyundaiRegular";
+	src:url('../font/YouandiModernTR.eot');
+	src:url('../font/YouandiModernTR-.eot#iefix') format('embedded-opentype'),
+        url('../font/YouandiModernTR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+@font-face{
+	font-family:"NanumBarunGothicBold";
+	src:url('../font/NanumBarunGothicBold.eot');
+	src:url('../font/NanumBarunGothicBold-.eot#iefix') format('embedded-opentype'),
+        url('../font/NanumBarunGothicBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+
+/* 스타일 초기화 */
+/* 복붙 -> https://cssreset.com/scripts/eric-meyer-reset-css/ */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 하이퍼링크 스타일 */
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 숨김 콘텐츠 */
+.a11y-hidden{
+  /* background: lime; 구조 확인 위해 색 주는 것 */
+  position: absolute;
+  left: -9999em; /* 구조상 존재하니까 있되 화면 밖 안드로메다 어딘가로 보내버림 */
+}
+/* 본문 기본 스타일 */
+body{
+  font-family:"HyundaiRegular";
+}
+
+/* 헤더 */
+.header-container{
+  background: #fff;
+  box-shadow: 0 1px 1px 0 #aaa;
+  position: sticky; /* 위에 고정 */
+  top: 0;
+}
+
+.header{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+  /* background: pink; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 로고 */
+.brand{
+  font: 30pt/30pt "HyundaiExtraBold"; /*  글자 크기pt, 라인 간격pt */
+  color: rgb(51,51,51);
+}
+
+/* 메인 메뉴 */
+.gnb{
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+  font-size: 20pt;
+  line-height: 20pt;
+}
+.gnb li{
+  /* background: orangered; */
+  margin-left: 100px;
+}
+
+/* 메인 */
+.main-container{
+  height: 300vh;
+  background: teal;
+}
